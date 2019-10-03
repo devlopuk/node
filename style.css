@@ -1,4 +1,66 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
 
-  text-align: center;
+body
+
+{
+
+background-color: #2471A3;
+font-family: 'Source Code Pro', monospace;
+color: #FFF;
+padding-top: 130px;
+text-align: center;
+
+}
+
+a
+
+{
+font-weight:bold;
+color: #FFF;
+}
+
+a:hover
+{
+background-color: #FFC300;
+}
+
+.menu-bg
+
+{
+background-color: #FFC300;
+}
+
+
+.calc
+
+{
+max-width: 320px;
+border-radius: 20px;
+transform: rotate(-20deg);
+}
+
+.super
+
+{
+max-width: 320px;
+border-radius: 20px;
+transform: rotate(-20deg);
+}
+
+
+.villain
+
+{
+max-width: 320px;
+border-radius: 20px;
+transform: rotate(-20deg);
+}
+
+
+.footer
+
+{
+background-color: #FFC300;
+font-weight:bold;
+text-align: center;
 }

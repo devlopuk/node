@@ -32,6 +32,16 @@ res.send("<h1> Hello, " + firstname + " " + lastname + " <br>Your superhero name
 
 }); // finished result
 
+app.post('/supervillian', function(req, res){ //gets data from page
+
+var firstname = req.body.firstname; // gets first name from person
+var lastname = req.body.lastname; // gets last name from person
+
+
+res.send("<h1> Hello, " + firstname + " " + lastname + " <br>Your supervillian name is: " + villains.random() + "<br> You need to fight: " + heroes.random() + "<br><br><a href='super-hero.html'>Let's try again!</a></h1>");
+
+}); // finished result
+
 
 
 
