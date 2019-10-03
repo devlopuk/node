@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Node Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  <h1 class="display-1 title">MIND READER</h1><br>
+  <div id="1" class="pagecontainer" style="display: block;">
+    <h2 class="h3 mb-3 font-weight-bold">Choose a two digit number</h2><br>
+    <h4>(between 10 and 99)</h4><br>
+  </p>
+  </div>
+
+  <div id="2" class="pagecontainer" style="display: none;">
+    <h2 class="h3 mb-3 font-weight-bold">Substract the first and second number from your chosen number</h2><br>
+    <h4>(example: 45 would be (4+5)=9 (45-9=36)</h4><br>
+  </p>
+  </div>
+
+  <div id="3" class="pagecontainer" style="display: none;">
+    <h2 class="h3 mb-3 font-weight-bold">Choose which symbol replicates your number</h2><br>
+  <img class ="symbols" src="reader.png">
+  </p>
+  </div>
+
+  <div id="4" class="pagecontainer" style="display: none;">
+    <h2 class="h3 mb-3 font-weight-bold">Is this your symbol?</h2><br>
+  PICTURE OF SYMBOL
+  </p>
+  </div>
+
+  <div class="bottom">
+    <button class="btn btn-success text-uppercase font-weight-bold" a href="#" onclick="prev()">< Previous step</a></button>
+        <button class="btn btn-success text-uppercase font-weight-bold" a href="#" onclick="next()">Next step ></a></button>
+  </div>
+  <script src="form.js"></script>
+</body>
+</html>

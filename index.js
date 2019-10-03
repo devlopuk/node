@@ -1,6 +1,8 @@
 const express = require('express'); //express var
 const app = express(); //app var
+const http = require('http');
 const port = 1356; // port
+const hostname = '127.0.0.1'; // ip address
 const heroes = require('superheroes'); //superheroes package downloaded
 const villains = require('supervillains'); //supervillains package downloaded
 var bodyParser = require('body-parser'); //body-parser package downloaded
@@ -10,6 +12,8 @@ villains.all;
 
 app.use(express.static(__dirname + '/')); // css style sheet
 app.use(bodyParser.urlencoded({extended: true})); // to get bodyParser. extended is true.
+
+//ADDITION CALCUALTOR
 
 app.post('/result', function(req, res){ //gets data from page
 
@@ -22,6 +26,8 @@ res.send("<h1> The result is: " + result + "</h1>"); // finished result
 
 });
 
+// SUPER HERO NAME
+
 app.post('/superresult', function(req, res){ //gets data from page
 
 var firstname = req.body.firstname; // gets first name from person
@@ -32,19 +38,48 @@ res.send("<h1> Hello, " + firstname + " " + lastname + " <br>Your superhero name
 
 }); // finished result
 
+// SUPER VILLIAN NAME
 app.post('/supervillian', function(req, res){ //gets data from page
 
 var firstname = req.body.firstname; // gets first name from person
 var lastname = req.body.lastname; // gets last name from person
 
-
 res.send("<h1> Hello, " + firstname + " " + lastname + " <br>Your supervillian name is: " + villains.random() + "<br> You need to fight: " + heroes.random() + "<br><br><a href='super-hero.html'>Let's try again!</a></h1>");
+
+}); // finished result
+
+// BMI RESULTS
+
+app.post('/bmi', function(req, res){ //gets data from page
+
+var name = req.body.name; // gets name from person
+var a = Number(req.body.num1); // calculates weight
+var b = Number(req.body.num2); // calculates height
+
+var result = a / b;
+
+res.send("<h1> Hello, " + name + " <br> Your result is: " + result + "</h1>");
+
+}); // finished result
+
+//MIND READER GAME
+
+app.post('/mind', function(req, res){ //gets data from page
+
+var name = req.body.name; // gets name from person
+var a = Number(req.body.num1); // calculates weight
+var b = Number(req.body.num2); // calculates height
+
+var result = a / b;
+
+res.send("<h1> Hello, " + name + " <br> Your result is: " + result + "</h1>");
 
 }); // finished result
 
 
 
 
+// END OF PROGRAMS
 app.get('/', function(req, res){
 res.sendFile(__dirname + '/index.html'); // pulls index.html
 });

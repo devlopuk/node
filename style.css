@@ -29,7 +29,18 @@ background-color: #FFC300;
 {
 background-color: #FFC300;
 }
-
+.title
+{
+text-shadow: 4px 4px #ff0000;
+}
+.symbols
+{
+border: 5px solid #000;
+border-radius: 15%;
+}
+{
+background-color: #FFC300;
+}
 
 .calc
 
@@ -55,7 +66,6 @@ max-width: 320px;
 border-radius: 20px;
 transform: rotate(-20deg);
 }
-
 
 .footer
 
